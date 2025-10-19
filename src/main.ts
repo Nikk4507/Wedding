@@ -21,7 +21,6 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
     ])
   ],
   template: `
-
 <div class="invitation-container">
       <div class="stars"></div>
 
@@ -231,11 +230,11 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
               <div class="contact-grid">
                 <div class="contact-item">
                   <span class="contact-icon">📞</span>
-                  <span>+91 99340 20536</span>
+                  <a href="tel:+919934020536">+91 99340 20536</a>
                 </div>
                 <div class="contact-item">
                   <span class="contact-icon">✉️</span>
-                  <span>ivnikhilverma377&#64;gmail.com</span>
+                  <a href="mailto:ivnikhilverma377@gmail.com">ivnikhilverma377@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -276,6 +275,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
   margin-bottom: 24px;
   color: #5a4a42; /* or your chosen color */
   font-size: 2em;
+  align-items: center;
 }
 
 
@@ -1095,15 +1095,25 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 15px;
+      padding: 1.1rem;
       background: rgba(102, 126, 234, 0.05);
       border-radius: 10px;
-      font-size: 14px;
+      font-size: 1rem;
       color: #5a4a42;
     }
+    .contact-item a {
+      color: #5a4a42;
+      text-decoration: none;
+      word-break: break-word;
+      font-size: 1rem;
+      overflow-wrap: anywhere;
+      max-width: 90vw;
+      display: inline-block;
+    }
+
 
     .contact-icon {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
 
     .decorative-footer {
@@ -1500,6 +1510,34 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
         font-size: 20px;
         padding: 0 20px;
       }
+
+      .contact-item {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+      }
+
+      .contact-item a, .contact-item span:last-child {
+        max-width: 70vw;
+        font-size: 0.95rem;
+      }
+
+      .envelope-title, .card-content h1, .invitation-card h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 7vw; /* Responsive font size for mobile */
+    width: 90%;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .card-content, .invitation-card, .envelope-section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
     }
   `]
 })
@@ -1520,6 +1558,7 @@ export class App {
    showEnvelopePage() {
     this.showEnvelope = true;
     this.isRevealed = true;
+    this.playMusic();
   }
 
   openInvitation() {
@@ -1529,6 +1568,13 @@ export class App {
   toggleView() {
     this.showVisitingCard = !this.showVisitingCard;
   }
+
+  playMusic() {
+  const audio = new Audio('music.mp3');
+  audio.loop = true;
+  audio.volume = 0.3;
+  audio.play();
+}
 
   exitPage() {
     const confirmed = confirm('We are waiting for you to come in this great occasion!');
