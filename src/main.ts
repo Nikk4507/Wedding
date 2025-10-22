@@ -96,7 +96,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
 
           <div class="details-section">
             <div class="detail-item date-item">
-              <div class="detail-icon">📅</div>
+              <div class="detail-icon">🗓️</div>
               <div class="detail-text">
                 <p class="detail-label">Save the Date</p>
                 <p class="detail-value">November 23, 2025</p>
@@ -220,7 +220,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
                 <div class="location-icon">📍</div>
                 <h3>Venue Location</h3>
                 <p class="venue-name">Samargarh Resorts & Hotels</p>
-                <p class="venue-address">Samargarh, India</p>
+                <p class="venue-address">Samargarh, Ranchi, India</p>
                 <button class="map-button" (click)="openMap()">View Map</button>
               </div>
             </div>
@@ -284,7 +284,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #d4912bff 0%, #a24b4bff 100%);
       padding: 20px;
       position: relative;
       overflow: hidden;
@@ -616,7 +616,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
     .groom-name {
       font-size: 48px;
       font-weight: 400;
-      color: #667eea;
+      color: #df982eff;
       font-family: 'Georgia', serif;
       animation: nameFloat 3s ease-in-out infinite;
     }
@@ -775,7 +775,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
       font-weight: 600;
       letter-spacing: 1px;
       color: white;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #df982eff 0%, #a2644bff 100%);
       border: none;
       border-radius: 50px;
       cursor: pointer;
@@ -956,7 +956,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
     .info-card .name {
       font-size: 24px;
       font-weight: 600;
-      color: #667eea;
+      color: #df982eff;
       margin: 10px 0;
       font-family: 'Georgia', serif;
     }
@@ -1023,7 +1023,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
     }
 
     .location-card {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #df982eff 0%, #a2644bff 100%);
       padding: 40px;
       border-radius: 15px;
       color: white;
@@ -1056,7 +1056,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
     .map-button {
       padding: 12px 30px;
       background: white;
-      color: #667eea;
+      color: #df982eff;
       border: none;
       border-radius: 50px;
       font-size: 16px;
@@ -1154,7 +1154,14 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
 
     @media (max-width: 768px) {
       .invitation-card {
-        padding: 40px 25px;
+        padding: 20px 15px;
+      }
+
+      .invitation-container {
+        padding: 5px;
+      }
+      .visiting-card-wrapper {
+        padding: 5px;
       }
 
       .wedding-title {
@@ -1365,7 +1372,7 @@ import { ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵNgOnChangesFeature } from
       width: 0;
       height: 0;
       border-radius: 50%;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #df982eff 0%, #a2644bff 100%);
       transform: translate(-50%, -50%);
       transition: width 0.6s, height 0.6s;
       z-index: 0;
